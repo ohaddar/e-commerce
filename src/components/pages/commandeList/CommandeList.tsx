@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import api from "../../api/Api";
+import api from "";
 import toast from "react-hot-toast";
 import { Commande } from "../../class/commandeClass/CommandeClass";
 import { User } from "../../class/userClass/UserClass";
