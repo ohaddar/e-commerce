@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import api from "../../api/Api.ts";
+import api from "../../api/Api";
 import { useNavigate } from "react-router-dom";
-import TextInput from "../../textInput/TextInput.tsx";
+import TextInput from "../textInput/TextInput.tsx";
 import { Product } from "../../class/productClass/ProductClass.ts";
 
 const ListProduct: React.FC = () => {
@@ -15,7 +15,7 @@ const ListProduct: React.FC = () => {
     const fetchData = async () => {
       await api
         .post("/api/produit/all")
-        .then(function (response: any) {
+        .then(function (response) {
           const listProducts = response.data.map(
             (product: Product) =>
               new Product(
